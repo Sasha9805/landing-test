@@ -1,0 +1,162 @@
+.hero
+  padding: 40px 0 380px
+
+  background: url('../img/hero-bg.png') no-repeat top right
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 253px
+  &__brand
+    margin-left: -83px
+  &__btn
+    padding: 4px 56px
+
+    @include medium
+    font-size: 12px
+    line-height: 18px
+.nav
+  &__burger
+    display: none
+  &__list
+    display: flex
+    margin: 0
+    padding: 0
+
+    list-style: none
+  &__item
+    &:not(:last-of-type)
+      margin-right: 60px
+  &__link
+    line-height: 24px
+    font-size: 14px
+
+    color: $menu-header-color
+    &:hover
+      color: lighten($menu-header-color, 30%)
+.intro
+  max-width: 540px
+  width: 50%
+  &__title
+    margin-bottom: 20px
+
+    @include medium
+    font-size: 50px
+    line-height: 66px
+    letter-spacing: 1px
+
+    color: $title-color
+  &__descr
+    margin-bottom: 69px
+
+    font-size: 18px
+    line-height: 30px
+    
+    color: $menu-header-color
+  &__text
+    display: block
+    margin-top: -8px
+    &::before
+      content: '.'
+      
+      display: block
+      line-height: 1.25
+
+      visibility: hidden
+  &__btn
+    padding: 5px 39px
+
+    @include medium
+    font-size: 16px
+    line-height: 26px
+    &:first-of-type
+      margin-right: 30px
+    &_hover
+      padding: 5px 48px
+      
+      line-height: 23px
+      
+      color: $title-color
+      background-color: #fff
+      border: 2px solid $title-color
+      border-radius: 2px
+      &:hover
+        background-color: $btn-bg
+        color: #fff
+
+@media (max-width: 1100px)
+  .hero
+    background-size: 75% 100%
+
+@media (max-width: 992px)
+  .hero
+    padding-bottom: 70px
+
+    background: none
+    &__wrapper
+      margin-bottom: 50px
+  .intro
+    width: 95%
+
+@media (max-width: 768px)
+  .nav__burger:hover
+    position: relative
+
+    cursor: pointer
+    & + .nav__list
+      position: absolute
+
+      display: block
+  .hero
+    &__wrapper
+      align-items: flex-start
+    &__brand
+      margin-left: 43px
+    &__btn
+      padding: 4px 30px
+  .nav
+    &__burger
+      display: block
+    &__list
+      display: none
+      width: 150px
+      flex-direction: column
+
+      background-color: $logo-color
+      &:hover
+        position: absolute
+
+        display: block
+    &__item
+      &:not(:last-of-type)
+        margin-right: 0
+      &:hover
+        background-color: lighten($logo-color, 20%)
+    &__link
+      display: block
+      width: 100%
+      height: 100%
+      padding: 10px 5px 10px
+
+      font-size: 18px
+
+      color: #fff
+  .intro
+    &__title
+      font-size: 25px
+      line-height: 50px
+    &__descr
+      margin-bottom: 20px
+
+@media (max-width: 576px)
+  .intro
+    &__btns
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+    &__btn
+      width: 70%
+      margin-right: 0
+      &:first-of-type
+        margin-bottom: 20px

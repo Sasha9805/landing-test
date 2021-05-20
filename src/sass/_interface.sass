@@ -1,3 +1,25 @@
+*, *::after, *::before
+  box-sizing: border-box
+body
+  @include reg
+a
+  text-decoration: none
+h1, h2
+  margin: 0
+img
+  max-width: 100%
 .container
-  max-width: 1100px
+  max-width: 1110px
   width: 95%
+  margin: 0 auto
+.brand
+  @include bold
+  font-size: 26px
+  line-height: 38px
+  color: $logo-color
+.btn
+  background-color: $btn-bg
+  color: #fff
+  border: none
+  &:hover
+    cursor: pointer

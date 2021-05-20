@@ -364,4 +364,265 @@ template {
   font-weight: normal;
   font-style: normal;
 }
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Regular';
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1110px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.brand {
+  font-family: 'Roboto Bold';
+  font-size: 26px;
+  line-height: 38px;
+  color: #37447E;
+}
+
+.btn {
+  background-color: #111B47;
+  color: #fff;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.hero {
+  padding: 40px 0 380px;
+  background: url("../img/hero-bg.png") no-repeat top right;
+}
+
+.hero__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 253px;
+}
+
+.hero__brand {
+  margin-left: -83px;
+}
+
+.hero__btn {
+  padding: 4px 56px;
+  font-family: 'Roboto Medium';
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.nav__burger {
+  display: none;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item:not(:last-of-type) {
+  margin-right: 60px;
+}
+
+.nav__link {
+  line-height: 24px;
+  font-size: 14px;
+  color: #505F98;
+}
+
+.nav__link:hover {
+  color: #adb5d4;
+}
+
+.intro {
+  max-width: 540px;
+  width: 50%;
+}
+
+.intro__title {
+  margin-bottom: 20px;
+  font-family: 'Roboto Medium';
+  font-size: 50px;
+  line-height: 66px;
+  letter-spacing: 1px;
+  color: #091133;
+}
+
+.intro__descr {
+  margin-bottom: 69px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #505F98;
+}
+
+.intro__text {
+  display: block;
+  margin-top: -8px;
+}
+
+.intro__text::before {
+  content: '.';
+  display: block;
+  line-height: 1.25;
+  visibility: hidden;
+}
+
+.intro__btn {
+  padding: 5px 39px;
+  font-family: 'Roboto Medium';
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.intro__btn:first-of-type {
+  margin-right: 30px;
+}
+
+.intro__btn_hover {
+  padding: 5px 48px;
+  line-height: 23px;
+  color: #091133;
+  background-color: #fff;
+  border: 2px solid #091133;
+  border-radius: 2px;
+}
+
+.intro__btn_hover:hover {
+  background-color: #111B47;
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    background-size: 75% 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding-bottom: 70px;
+    background: none;
+  }
+  .hero__wrapper {
+    margin-bottom: 50px;
+  }
+  .intro {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav__burger:hover {
+    position: relative;
+    cursor: pointer;
+  }
+  .nav__burger:hover + .nav__list {
+    position: absolute;
+    display: block;
+  }
+  .hero__wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .hero__brand {
+    margin-left: 43px;
+  }
+  .hero__btn {
+    padding: 4px 30px;
+  }
+  .nav__burger {
+    display: block;
+  }
+  .nav__list {
+    display: none;
+    width: 150px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #37447E;
+  }
+  .nav__list:hover {
+    position: absolute;
+    display: block;
+  }
+  .nav__item:not(:last-of-type) {
+    margin-right: 0;
+  }
+  .nav__item:hover {
+    background-color: #6171ba;
+  }
+  .nav__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 5px 10px;
+    font-size: 18px;
+    color: #fff;
+  }
+  .intro__title {
+    font-size: 25px;
+    line-height: 50px;
+  }
+  .intro__descr {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .intro__btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .intro__btn {
+    width: 70%;
+    margin-right: 0;
+  }
+  .intro__btn:first-of-type {
+    margin-bottom: 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
