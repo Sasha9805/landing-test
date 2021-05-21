@@ -4,7 +4,7 @@ body
   @include reg
 a
   text-decoration: none
-h1, h2
+h1, h2, h3, h4
   margin: 0
 img
   max-width: 100%
@@ -23,3 +23,42 @@ img
   border: none
   &:hover
     cursor: pointer
+.fix-text
+  display: block
+  margin-top: -8px
+  &::before
+    content: '.'
+    
+    display: block
+    line-height: 1.25
+
+    visibility: hidden
+.title
+  @include medium
+  font-size: 36px
+  line-height: 48px
+  color: $title-color
+.descr
+  font-size: 16px
+  line-height: 26px
+  color: $text-title-color
+.terms
+  display: flex
+  justify-content: space-between
+.term
+  &__title
+    @include medium
+    font-size: 16px
+    line-height: 26px
+    color: $title-color
+    margin-bottom: 6px
+  &__descr
+    font-size: 12px
+    line-height: 18px
+    color: $text-color
+  &__image
+    width: 36px
+    height: 36px
+@media(max-width: 768px)
+  .title
+    font-size: 25px

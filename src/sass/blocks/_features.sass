@@ -1,0 +1,41 @@
+.features
+  margin-top: 180px
+  padding-top: 140px
+  padding-bottom: 95px
+  background: url('../img/features.jpg') no-repeat
+  background-size: 37.5% 100%
+  background-color: $features-bg
+  &__content
+    margin-left: 43%
+  &__terms
+    flex-wrap: wrap
+  &__term
+    width: 47%
+  &__descr
+    margin-bottom: 55px
+  &__image
+    margin-bottom: 15px
+  &-term
+    &__descr
+      margin-bottom: 43px
+
+@media (max-width: 992px)
+  .features
+    background: $features-bg
+    padding-top: 40px
+    padding-bottom: 40px
+    margin-top: 40px
+    &__content
+      margin-left: 0
+      width: 95%
+      max-width: 540px
+@media (max-width: 576px)
+  .features
+    margin-top: 0
+    padding-bottom: 0
+    &__terms
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &__term
+      width: 80%
