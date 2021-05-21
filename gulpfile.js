@@ -15,7 +15,7 @@ function transferFonts() {
 }
 
 function transferJS() {
-  return src('src/js/main.js')
+  return src('src/js/*.js')
     .pipe(dest('dist/js/'));
 }
 
@@ -33,4 +33,4 @@ function compressImages() {
     .pipe(dest('dist/assets/images/'));
 }
 
-exports.build = parallel(minifyHTML, minifyCSS, compressImages, transferFonts);
+exports.build = parallel(minifyHTML, minifyCSS, compressImages, transferFonts, transferJS);
