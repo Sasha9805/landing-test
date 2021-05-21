@@ -15,22 +15,10 @@
     @include medium
     font-size: 12px
     line-height: 18px
-.nav
-  &__burger
-    display: none
-  &__list
-    display: flex
-    margin: 0
-    padding: 0
-
-    list-style: none
   &__item
     &:not(:last-of-type)
       margin-right: 60px
   &__link
-    line-height: 24px
-    font-size: 14px
-
     color: $menu-header-color
     &:hover
       color: lighten($menu-header-color, 30%)
@@ -99,14 +87,6 @@
     width: 95%
 
 @media (max-width: 768px)
-  .nav__burger:hover
-    position: relative
-
-    cursor: pointer
-    & + .nav__list
-      position: absolute
-
-      display: block
   .hero
     &__wrapper
       align-items: flex-start
@@ -114,13 +94,8 @@
       margin-left: 43px
     &__btn
       padding: 4px 30px
-  .nav
-    &__burger
-      display: block
     &__list
-      display: none
       width: 150px
-      flex-direction: column
 
       background-color: $logo-color
       &:hover
