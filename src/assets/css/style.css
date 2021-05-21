@@ -520,7 +520,7 @@ img {
 
 .hero {
   padding: 40px 0 380px;
-  background: url("../img/hero-bg.png") no-repeat top right;
+  background: url("../images/hero-bg.png") no-repeat top right;
 }
 
 .hero__wrapper {
@@ -783,7 +783,7 @@ img {
   margin-top: 180px;
   padding-top: 140px;
   padding-bottom: 95px;
-  background: url("../img/features.jpg") no-repeat;
+  background: url("../images/features.jpg") no-repeat;
   background-size: 37.5% 100%;
   background-color: #FBFBFD;
 }
